@@ -1,4 +1,4 @@
 package com.company.food;
 
-public interface food {
+public class Food {
 }
