@@ -1,17 +1,17 @@
 package com.company.animals;
 
 import com.company.food.CarnivorousFood;
+import com.company.food.Food;
 
 public abstract class Carnivorous extends Animal {
-    public void eat(CarnivorousFood carnivorousFood) {
-        if (carnivorousFood.getClass() != CarnivorousFood.class) {
-            System.out.println("Не буду кушать это.");
+    @Override
+    public void eat(Food food) {
+        if (food.getClass() != CarnivorousFood.class) {
+            System.out.println("Не буду кушать это");
         }
-        else {
-            eat(carnivorousFood);
-        }
-
-
+        else super.eat(food);
+    }
+    public void play() {
 
     }
 }
