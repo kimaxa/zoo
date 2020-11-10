@@ -5,9 +5,6 @@ import java.util.Scanner;
 
 public class Lion extends Carnivorous {
 
-    public void eat(Food food) {
-    }
-
     @Override
     public void play() {
         Scanner scanner = new Scanner(System.in);
@@ -15,4 +12,10 @@ public class Lion extends Carnivorous {
         System.out.println("Введите игру для Lion: " + game);
         System.out.println("Играю в " + game);
     }
+    @Override
+    public void growl(){
+        System.out.println("Ааарррр!");
+        super.growl();
+    }
+
 }

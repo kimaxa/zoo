@@ -6,10 +6,6 @@ import java.util.Scanner;
 
 public class Elephant extends Herbivore {
 
-    public void eat(Food food) {
-
-    }
-
     @Override
     public void play() {
         Scanner scanner = new Scanner(System.in);

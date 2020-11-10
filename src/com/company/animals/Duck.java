@@ -6,10 +6,6 @@ import java.util.Scanner;
 
 public class Duck extends Herbivore {
 
-    public void eat(Food food) {
-
-    }
-
     @Override
     public void play() {
         Scanner scanner = new Scanner(System.in);
@@ -17,4 +13,9 @@ public class Duck extends Herbivore {
         System.out.println("Введите игру для Duck: " + game);
         System.out.println("Играю в " + game);
     }
+    @Override
+    public void rejoice() {
+        System.out.println("Кря-кря");
+    }
 }
+
