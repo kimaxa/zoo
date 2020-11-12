@@ -1,26 +1,28 @@
 package com.company;
 import com.company.animals.*;
 import com.company.aviaries.Aviary;
+import com.company.aviaries.CarnivorousAviary;
+import com.company.aviaries.HerbivoreAviary;
 import com.company.food.HerbivoreFood;
 import com.company.food.CarnivorousFood;
 
 public class Main {
 
     public static void main(String[] args) {
-        //Создание вольеров.
-
-
-	    //Тип еды.
+    CarnivorousAviary carnivorousAviary1 = new CarnivorousAviary(3);
+    CarnivorousAviary carnivorousAviary2 = new CarnivorousAviary(3);
+    HerbivoreAviary herbivoreAviary1 = new HerbivoreAviary(1);
+    HerbivoreAviary herbivoreAviary2 = new HerbivoreAviary(2);
     HerbivoreFood herbivoreFood = new HerbivoreFood();
     CarnivorousFood carnivorousFood = new CarnivorousFood();
-        //Животные.
-    Zebra zebra = new Zebra();
+    Zebra zebra1 = new Zebra();
+    Zebra zebra2 = new Zebra();
     Duck duck = new Duck();
     Elephant elephant = new Elephant();
     Lion lion = new Lion();
     Tiger tiger = new Tiger();
-        //Методы животных.
-    zebra.eat(new HerbivoreFood());
+    zebra1.eat(new HerbivoreFood());
+    zebra2.eat(new HerbivoreFood());
     duck.eat(new HerbivoreFood());
     elephant.eat(new HerbivoreFood());
     tiger.eat(new CarnivorousFood());
@@ -31,18 +33,18 @@ public class Main {
     tiger.play();
     tiger.growl();
     tiger.rumble();
-
     elephant.play();
     elephant.rejoice();
     elephant.rumble();
     duck.play();
     duck.rumble();
     duck.rejoice();
-    zebra.play();
-    zebra.rejoice();
-    zebra.rumble();
-
-
+    zebra1.play();
+    zebra1.rejoice();
+    zebra1.rumble();
+    zebra2.play();
+    zebra2.rejoice();
+    zebra2.rumble();
 
     }
 }

@@ -1,29 +1,30 @@
 package com.company.aviaries;
 import com.company.animals.Animal;
-import com.company.animals.Carnivorous;
-
-import java.nio.Buffer;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
 
-public abstract class Aviary <T extends Animal> {
+
+public class Aviary <T extends Animal> {
     private int limit;
     public HashMap<String, T> animalAviary = new HashMap<>();
     public Aviary(int limit) {
         this.limit = limit;
     }
+
     public void addAnimal (T animal) {
         if (limit > animalAviary.size()) {
             animalAviary.put(animal.getName(), animal);
             System.out.println(animal.getClass().getName() + " добавлен. В вольере сейчас - " + animalAviary.size());
-        }
-        else if (limit <= animalAviary.size()) {
+        } else if (limit <= animalAviary.size()) {
             System.out.println("Вольер заполнен.");
         }
+    }
+    public void deleteAnimal(T animal) {
+        animalAviary.remove(animal.getClass().getName());
+        System.out.println(animal.getClass().getName() + " убран из вольера. В вольере сейчас - " + animalAviary.size());
+    }
+}
 
-    }
-    }
+
 
 
 
