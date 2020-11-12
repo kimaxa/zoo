@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
     CarnivorousAviary carnivorousAviary1 = new CarnivorousAviary(3);
     CarnivorousAviary carnivorousAviary2 = new CarnivorousAviary(3);
-    HerbivoreAviary herbivoreAviary1 = new HerbivoreAviary(1);
+    HerbivoreAviary herbivoreAviary1 = new HerbivoreAviary(2);
     HerbivoreAviary herbivoreAviary2 = new HerbivoreAviary(2);
     HerbivoreFood herbivoreFood = new HerbivoreFood();
     CarnivorousFood carnivorousFood = new CarnivorousFood();
