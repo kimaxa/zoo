@@ -1,9 +1,7 @@
 package com.company.aviaries;
 import com.company.animals.Animal;
-import com.company.animals.Lion;
 
 import java.util.HashMap;
-import java.util.Map;
 
 
 public class Aviary <T extends Animal> {
@@ -25,7 +23,7 @@ public class Aviary <T extends Animal> {
         animalAviary.remove(animal.getName());
         System.out.println(animal.getName() + " убран из вольера. В вольере сейчас - " + animalAviary.size());
     }
-    public Object getAnimal(String name) {
+    public T getAnimal(String name) {
         System.out.println(animalAviary.get(name));
         return animalAviary.get(name);
     }
