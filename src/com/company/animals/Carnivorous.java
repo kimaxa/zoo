@@ -4,6 +4,10 @@ import com.company.food.CarnivorousFood;
 import com.company.food.Food;
 
 public abstract class Carnivorous extends Animal implements Growling, Rumbling {
+    public Carnivorous(String name) {
+        super();
+    }
+
     @Override
     public void eat(Food food) {
         if (food.getClass() != CarnivorousFood.class) {

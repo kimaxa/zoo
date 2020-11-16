@@ -6,6 +6,10 @@ import java.util.Scanner;
 
 public class Tiger extends Carnivorous {
 
+    public Tiger(String name) {
+        super(name);
+    }
+
     @Override
     public void play() {
         Scanner scanner = new Scanner(System.in);

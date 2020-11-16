@@ -19,8 +19,8 @@ public class Main {
     Zebra zebra2 = new Zebra();
     Duck duck = new Duck();
     Elephant elephant = new Elephant();
-    Lion lion = new Lion();
-    Tiger tiger = new Tiger();
+    Lion lion = new Lion("Макс");
+    Tiger tiger = new Tiger("Лейсан");
     zebra1.eat(new HerbivoreFood());
     zebra2.eat(new HerbivoreFood());
     duck.eat(new HerbivoreFood());
@@ -45,6 +45,8 @@ public class Main {
     zebra2.play();
     zebra2.rejoice();
     zebra2.rumble();
+    carnivorousAviary1.getAnimal("Макс");
+    carnivorousAviary2.getAnimal("Лейсан");
 
     }
 }
