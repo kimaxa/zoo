@@ -1,10 +1,11 @@
 package com.company.animals;
-
-import com.company.food.Food;
-
+import com.company.aviaries.SizeAviary;
 import java.util.Scanner;
 
 public class Duck extends Herbivore {
+    public Duck(String name, SizeAviary size) {
+        super(name, SizeAviary.SMALL);
+    }
 
     @Override
     public void play() {

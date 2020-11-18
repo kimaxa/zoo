@@ -1,11 +1,11 @@
 package com.company.animals;
-
-import com.company.food.Food;
-
+import com.company.aviaries.SizeAviary;
 import java.util.Scanner;
 
 public class Elephant extends Herbivore {
-
+    public Elephant(String name, SizeAviary size) {
+        super(name, SizeAviary.LARGE);
+    }
     @Override
     public void play() {
         Scanner scanner = new Scanner(System.in);

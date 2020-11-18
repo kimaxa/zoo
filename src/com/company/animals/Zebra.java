@@ -1,14 +1,12 @@
 package com.company.animals;
-
+import com.company.aviaries.SizeAviary;
 import com.company.food.Food;
-
 import java.util.Scanner;
 
 public class Zebra extends Herbivore {
-
-    public void eat(Food food) {
+    public Zebra(String name, SizeAviary size) {
+        super(name, SizeAviary.MIDDLE);
     }
-
     @Override
     public void play() {
         Scanner scanner = new Scanner(System.in);

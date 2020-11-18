@@ -1,30 +1,31 @@
 package com.company.animals;
-
-import com.company.food.Food;
+import com.company.aviaries.SizeAviary;
+import com.company.food.CarnivorousFood;
 import com.company.food.HerbivoreFood;
-
-import java.sql.SQLOutput;
+import com.company.food.WrongFoodException;
 
 public abstract class Herbivore extends Animal implements Rejoicing, Rumbling {
-    @Override
-    public void eat(Food food) {
-        if (food.getClass() != HerbivoreFood.class) {
-            System.out.println("Не буду кушать это");
-        }
-        else super.eat(food); }
-
-    public void play() {
-
+    { Carnivorous = false; }
+    public Herbivore(String name, SizeAviary size) {
+        super(name, size);
     }
-
+    @Override
+    public void eat(HerbivoreFood herbivoreFood) {
+        if (herbivoreFood.getClass() == HerbivoreFood.class) {
+            System.out.println("Травоядный будет это кушать");
+        }
+    }
+    @Override
+    public void eat(CarnivorousFood carnivorousFood) throws WrongFoodException {
+        throw new WrongFoodException("Травоядный не будет это есть");
+    }
+    public void play() {
+    }
     public void rejoice() {
         System.out.println("Ура!");
-
     }
-
     public void rumble() {
-        System.out.println("Мррр");;
-
+        System.out.println("Мррр");
     }
 }
 

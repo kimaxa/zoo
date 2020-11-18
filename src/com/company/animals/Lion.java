@@ -1,14 +1,12 @@
 package com.company.animals;
-import com.company.food.Food;
-
+import com.company.aviaries.SizeAviary;
 import java.util.Scanner;
 
 public class Lion extends Carnivorous {
 
-    public Lion(String name) {
-        super(name);
+    public Lion(String name, SizeAviary sizeAviary) {
+        super(name, SizeAviary.BIG);
     }
-
     @Override
     public void play() {
         Scanner scanner = new Scanner(System.in);
