@@ -62,11 +62,6 @@ public class Main {
         } catch (WrongFoodException exception) {
             System.out.println(exception.getMessage());
         }
-        try {
-            foodAnimal(melman);
-        } catch (WrongFoodException exception) {
-            System.out.println(exception.getMessage());
-        }
     }
 }
 
